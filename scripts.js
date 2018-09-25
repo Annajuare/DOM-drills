@@ -1,7 +1,10 @@
+//Problem #3--Create a div in the DOM and a "header-container"
 document.addEventListener("DOMContentLoaded", function() {
 let div = document.createElement('div');
 div.className = "header-container";
-
+//Problem #4--Create an h1 element, then a text node with text.
+//append the text to the h1 then append the h1 to the div;
+//then append the div to the body.  Give each heading a class name.
 let h1 = document.createElement('h1');
 let h1Text = document.createTextNode("This is an h1");
 h1.className = "h1";
@@ -17,7 +20,7 @@ h2.className = "h2";
 h2.appendChild(h2Text);
 div.appendChild(h2);
 
-
+//Problem #6--Repeat the process for h3 through h6
 let h3 = document.createElement('h3');
 let h3Text = document.createTextNode("This is an h3");
 h3.className = "h3";
@@ -46,7 +49,9 @@ h6.className = "h6";
 h6.appendChild(h6Text);
 div.appendChild(h6);
 
-
+//Problem #8--Create an array of 8 colors, add an event listener,
+//that changes color of a heading to a random color from the array
+//when it is double-clicked.
 document.addEventListener("dblclick", function(){
     
     let headers = ["h1", "h2", "h3", "h4", "h5", "h6"];
@@ -54,10 +59,8 @@ document.addEventListener("dblclick", function(){
 
     for(var i = 0; i < headers.length; i++) {
    h1.addEventListener("dblclick", function() {
-    
     h1.style.color = randomColor();
-
-    })
+   })
     h2.addEventListener("dblclick", function() {
         h2.style.color = randomColor();
    })
@@ -87,3 +90,20 @@ function randomColor() {
 }
    })   
 })
+//Problem 11-12--Write a function that inserts a list item, have the first item
+//say "Tlhis is a list item 1" and any subsequent list item should have the number
+//incremented by 1.  Problem #12 says to create an event listener that calls the new list item
+//function every time the button is clicked.
+ document.addEventListener("click", function() {
+    let buttonListItem=document.createElement('li');
+    let listText1=document.createTextNode("This is list item 1")
+    button.appendChild(buttonListItem);
+    li.appendChild(listText1);
+    
+    document.getElementById("great-button").   
+})
+
+    
+
+        
+
