@@ -49,27 +49,41 @@ div.appendChild(h6);
 
 document.addEventListener("dblclick", function(){
     
-     let headers = ["h1", "h2", "h3", "h4", "h5", "h6"];
-     let colors = ["Red", "Gold", "Purple", "Green", "Orange"]
+    let headers = ["h1", "h2", "h3", "h4", "h5", "h6"];
+    let colors = ["Red", "Gold", "Purple", "Green", "Orange"]
 
-for(var i = 0; i < headers.length; i++) {
-    headers.addEventListener("dblclick", function() {
-        headers.appendChild(colors[5]); 
+    for(var i = 0; i < headers.length; i++) {
+   h1.addEventListener("dblclick", function() {
+    
+    h1.style.color = randomColor();
+
     })
+    h2.addEventListener("dblclick", function() {
+        h2.style.color = randomColor();
+   })
+   h3.addEventListener("dblclick", function() {
+       h3.style.color = randomColor();
+   })
+   h4.addEventListener("dblclick", function() {
+       h4.style.color = randomColor();
+   })
+   h5.addEventListener("dblclick", function() {
+       h5.style.color = randomColor();
+   })
+   h6.addEventListener("dblclick", function() {
+       h6.style.color = randomColor();
+   })
 }
-
 
 function randomColor() {
-    let randomRed = Math.floor(Math.random() * 5);
-    let randomGold = Math.floor(Math.random() * 5);
-    let randomPurple = Math.floor(Math.random() * 5);
-    //create the string that is the ‘random color’
-    let randomColor = "rgb("+ randomRed + "," + randomGold + ", " + randomPurple + ")";
+   let randomRed = Math.floor(Math.random() * 255);
+   let randomGold = Math.floor(Math.random() * 255);
+   let randomPurple = Math.floor(Math.random() * 255);
+   //create the string that is the ‘random color’
+   let randomColor = "rgb("+ randomRed + "," + randomGold + ", " + randomPurple + ")";
 
-    console.log(randomColor);
-    document.body.appendChild(randomColor);
+   console.log(randomColor);
+   return randomColor;
 }
-    })   
+   })   
 })
-
-
