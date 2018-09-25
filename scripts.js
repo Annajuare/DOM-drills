@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return randomColor;
         }
     })
-    document.addEventListener("click", function () {
+    document.querySelector('.great-button').addEventListener("click", function () {
         let listItem = document.createElement('li');
         let listText1 = document.createTextNode("This is list item 1")
 
