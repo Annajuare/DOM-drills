@@ -60,7 +60,13 @@ document.addEventListener("dblclick", function(){
     for(var i = 0; i < headers.length; i++) {
    h1.addEventListener("dblclick", function() {
     h1.style.color = randomColor();
-   })
+}) 
+document.addEventListener("dblclick", function() {
+   
+ li.style.color = randomColor();
+    
+})  
+   
     h2.addEventListener("dblclick", function() {
         h2.style.color = randomColor();
    })
@@ -95,13 +101,14 @@ function randomColor() {
 //incremented by 1.  Problem #12 says to create an event listener that calls the new list item
 //function every time the button is clicked.
  document.addEventListener("click", function() {
-    let buttonListItem=document.createElement('li');
-    let listText1=document.createTextNode("This is list item 1")
-    button.appendChild(buttonListItem);
-    li.appendChild(listText1);
+    let listItem=document.createElement('li');
     
-    document.getElementById("great-button").   
-})
+    let listText1=document.createTextNode("This is list item 1")
+    
+    listItem.appendChild(listText1);
+     document.body.appendChild(listItem);
+     
+ })
 
     
 
