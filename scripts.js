@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     h1.addEventListener("dblclick", function () {
         h1.style.color = randomColor();
     })
-    
+
 
     h2.addEventListener("dblclick", function () {
         h2.style.color = randomColor();
@@ -90,24 +90,34 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(randomColor);
         return randomColor;
     }
+    //Problem 11-12--Write a function that inserts a list item, have the first item
+    //say "Tlhis is a list item 1" and any subsequent list item should have the number
+    //incremented by 1.  Problem #12 says to create an event listener that calls the new list item
+    //function every time the button is clicked.
+    document
+        .querySelector('.great-button')
+        .addEventListener('click', function () {
+            let listItem = document.createElement('li');
+            let listText1 = document.createTextNode("This is list item 1")
 
-    document.querySelector('.great-button').addEventListener("click", function () {
-        addEventListener('click', function() {   
-        let listItem = document.createElement('li');
-        let listText1 = document.createTextNode("This is list item 1")
+            listItem.appendChild(listText1);
+            document.body.appendChild(listItem);
+            listItem.addEventListener('click', function () {
+                listItem.style.color = randomColor();
+            })
+            li.addEventListener('dblclick', function () {
 
-        listItem.appendChild(listText1);
-        document.body.appendChild(listItem);
-        listItem.addEventListener('click', function() {
-            listItem.style.color = randomColor();
-    })
-  })
- })
+                let removeListItem = document.getElementByName('li');
+                removeListItem.remove(listItem);
+                $(document).ready(function() {
+                    $(listItem).remove(removeListItem);
+                });
+            })
+        })
+
 })
-//Problem 11-12--Write a function that inserts a list item, have the first item
-//say "Tlhis is a list item 1" and any subsequent list item should have the number
-//incremented by 1.  Problem #12 says to create an event listener that calls the new list item
-//function every time the button is clicked.
+
+
 
 
 
