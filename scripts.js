@@ -52,57 +52,57 @@ document.addEventListener("DOMContentLoaded", function () {
     //Problem #8--Create an array of 8 colors, add an event listener,
     //that changes color of a heading to a random color from the array
     //when it is double-clicked.
-    document.addEventListener("dblclick", function () {
 
-        let headers = ["h1", "h2", "h3", "h4", "h5", "h6"];
-        let colors = ["Red", "Gold", "Purple", "Green", "Orange"]
 
-        for (var i = 0; i < headers.length; i++) {
-            h1.addEventListener("dblclick", function () {
-                h1.style.color = randomColor();
-            })
-            document.addEventListener("dblclick", function () {
+    let headers = ["h1", "h2", "h3", "h4", "h5", "h6"];
+    let colors = ["Red", "Gold", "Purple", "Green", "Orange"]
 
-                li.style.color = randomColor();
 
-            })
-
-            h2.addEventListener("dblclick", function () {
-                h2.style.color = randomColor();
-            })
-            h3.addEventListener("dblclick", function () {
-                h3.style.color = randomColor();
-            })
-            h4.addEventListener("dblclick", function () {
-                h4.style.color = randomColor();
-            })
-            h5.addEventListener("dblclick", function () {
-                h5.style.color = randomColor();
-            })
-            h6.addEventListener("dblclick", function () {
-                h6.style.color = randomColor();
-            })
-        }
-
-        function randomColor() {
-            let randomRed = Math.floor(Math.random() * 255);
-            let randomGold = Math.floor(Math.random() * 255);
-            let randomPurple = Math.floor(Math.random() * 255);
-            //create the string that is the ‘random color’
-            let randomColor = "rgb(" + randomRed + "," + randomGold + ", " + randomPurple + ")";
-
-            console.log(randomColor);
-            return randomColor;
-        }
+    h1.addEventListener("dblclick", function () {
+        h1.style.color = randomColor();
     })
+    
+
+    h2.addEventListener("dblclick", function () {
+        h2.style.color = randomColor();
+    })
+    h3.addEventListener("dblclick", function () {
+        h3.style.color = randomColor();
+    })
+    h4.addEventListener("dblclick", function () {
+        h4.style.color = randomColor();
+    })
+    h5.addEventListener("dblclick", function () {
+        h5.style.color = randomColor();
+    })
+    h6.addEventListener("dblclick", function () {
+        h6.style.color = randomColor();
+    })
+
+
+    function randomColor() {
+        let randomRed = Math.floor(Math.random() * 255);
+        let randomGold = Math.floor(Math.random() * 255);
+        let randomPurple = Math.floor(Math.random() * 255);
+        //create the string that is the ‘random color’
+        let randomColor = "rgb(" + randomRed + "," + randomGold + ", " + randomPurple + ")";
+
+        console.log(randomColor);
+        return randomColor;
+    }
+
     document.querySelector('.great-button').addEventListener("click", function () {
+        addEventListener('click', function() {   
         let listItem = document.createElement('li');
         let listText1 = document.createTextNode("This is list item 1")
 
         listItem.appendChild(listText1);
         document.body.appendChild(listItem);
-
+        listItem.addEventListener('click', function() {
+            listItem.style.color = randomColor();
     })
+  })
+ })
 })
 //Problem 11-12--Write a function that inserts a list item, have the first item
 //say "Tlhis is a list item 1" and any subsequent list item should have the number
